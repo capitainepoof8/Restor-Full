@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restor-Full - Réparateur de Fichers Offices</title>
+    <title>Restor-Full - Réparateur de Fichiers Office</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
-<link rel="stylesheet" href="style.css">
-<script src="myScript.js"></script>
 <body>
     <div class="container">
+        <!-- En-tête -->
         <div class="header">
             <div class="logo">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -24,6 +24,7 @@
         </div>
         <p class="subtitle">Restaurez vos fichiers Excel, Word et PowerPoint à leur version de base</p>
 
+        <!-- Zone de téléchargement -->
         <div class="upload-area" id="uploadArea">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -35,6 +36,7 @@
             <input type="file" id="fileInput" multiple accept=".xlsx,.xls,.docx,.doc,.pptx,.ppt">
         </div>
 
+        <!-- Section des fichiers sélectionnés -->
         <div class="files-section" id="filesSection">
             <div class="files-header">Fichiers sélectionnés (<span id="fileCount">0</span>)</div>
             <div id="filesList"></div>
@@ -43,6 +45,7 @@
             </button>
         </div>
 
+        <!-- Section des résultats -->
         <div class="results-section" id="resultsSection">
             <div class="results-header">
                 <div class="results-title">Résultats de la restauration</div>
@@ -58,6 +61,7 @@
             <div id="resultsList"></div>
         </div>
 
+        <!-- Boîte d'information -->
         <div class="info-box">
             <div class="info-title">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -75,9 +79,14 @@
             </ul>
         </div>
 
+        <!-- Pied de page -->
         <div class="footer">
             <p>Conçu par <span class="author">Soro Nontie Emmanuel</span></p>
         </div>
     </div>
+
+    <script src="myScript.js"></script>
 </body>
 </html>
+
+
