@@ -1,5 +1,4 @@
-
-        let selectedFiles = [];
+let selectedFiles = [];
         let repairResults = [];
 
         const uploadArea = document.getElementById('uploadArea');
@@ -314,4 +313,3 @@
                 setTimeout(() => downloadFile(repairResults.indexOf(result)), index * 200);
             });
         });
-    
