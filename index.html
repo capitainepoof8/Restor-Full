@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restor-Full - Réparateur de Fichers Offices</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="myScript.js"></script>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+            </div>
+            <h1>Restor-Full</h1>
+        </div>
+        <p class="subtitle">Restaurez vos fichiers Excel, Word et PowerPoint à leur version de base</p>
+
+        <div class="upload-area" id="uploadArea">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <div class="upload-title">Cliquez pour sélectionner des fichiers</div>
+            <div class="upload-subtitle">Excel (.xlsx, .xls), Word (.docx, .doc), PowerPoint (.pptx, .ppt)</div>
+            <input type="file" id="fileInput" multiple accept=".xlsx,.xls,.docx,.doc,.pptx,.ppt">
+        </div>
+
+        <div class="files-section" id="filesSection">
+            <div class="files-header">Fichiers sélectionnés (<span id="fileCount">0</span>)</div>
+            <div id="filesList"></div>
+            <button class="btn btn-primary" id="repairBtn">
+                Restaurer à la version de base
+            </button>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <div class="results-header">
+                <div class="results-title">Résultats de la restauration</div>
+                <button class="btn btn-success" id="downloadAllBtn" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Tout télécharger
+                </button>
+            </div>
+            <div id="resultsList"></div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Comment ça fonctionne ?
+            </div>
+            <ul class="info-list">
+                <li>• Cette application crée des fichiers Office vierges à partir du nom de vos fichiers corrompus</li>
+                <li>• Les fichiers restaurés sont des documents de base complètement vides</li>
+                <li>• Vous pouvez les ouvrir directement dans Microsoft Office</li>
+                <li>• Les fichiers seront téléchargés avec le préfixe "restaure_"</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Conçu par <span class="author">Soro Nontie Emmanuel</span></p>
+        </div>
+    </div>
+</body>
+</html>
